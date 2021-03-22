@@ -17,10 +17,11 @@ export default {
         task: Object,
     },
     methods: {
-        deleteTask(task) {
-            console.log(task)
-        }
-    }
+        deleteTask(id) {
+            this.$emit('delete-task', id)
+        },
+    },
+    emits: ['delete-task']
 }
 </script>
 
